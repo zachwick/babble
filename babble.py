@@ -52,6 +52,8 @@ def main():
     words = word_file.readlines()
     word_count = len(words)
 
+    code_url = "https colon slash slash github dot com slash zachwick slash babble"
+    
     # Construct a 'sentence' of five random words from our corpus
     sentence = ""
     for x in range(0, 6):
@@ -71,10 +73,11 @@ def main():
     
     # Play the audio of dots and dashes that make up our sentence
     play(sentence)
-
+    play(code_url)
+    
     # Wait fourteen time units, then generate new random message and play it
     time.sleep(FOURTEEN_UNITS)
-    
+
 def play(msg):
     pygame.init()
     for char in msg:
