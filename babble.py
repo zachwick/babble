@@ -42,7 +42,14 @@ MORSE = {'A': '.-',     'B': '-...',   'C': '-.-.',
          '0': '-----',  '1': '.----',  '2': '..---',
          '3': '...--',  '4': '....-',  '5': '.....',
          '6': '-....',  '7': '--...',  '8': '---..',
-         '9': '----.' 
+         '9': '----.' ,
+
+         ".": '.-.-.-', ",": '--..--', "?": '..--..',
+         "'": '.----.', "!": '-.-.--', "/": '-..-.',
+         "(": '-.--.',  ")": '-.--.-', "&": '.-...',
+         ":": '---...', ";": '-.-.-.', "=": '-...-',
+         "+": '.-.-.',  "-": '-....-', "_": '..--.-',
+         '"': '.-..-.', "$": '...-..-', "@": '.--.-.',
 }
 SOUND_PATH = 'morse_sound_files/'
 
@@ -65,8 +72,6 @@ def main():
     for char in sentence:
         if char == " ":
             morse_sentence += " " * 7
-        elif char == "'":
-            morse_sentence += ""
         else:
             morse_sentence += MORSE[char.upper()] + " "
     print(morse_sentence+"\n\n")
@@ -84,10 +89,9 @@ def play(msg):
         if char == " ":
             time.sleep(SEVEN_UNITS)
         else:
-            if char != "'":
-                pygame.mixer.music.load(SOUND_PATH + char.upper() + '_morse_code.ogg')
-                pygame.mixer.music.play()
-                time.sleep(THREE_UNITS)
+            pygame.mixer.music.load(SOUND_PATH + char.upper() + '_morse_code.ogg')
+            pygame.mixer.music.play()
+            time.sleep(THREE_UNITS)
     
 if __name__ == "__main__":
     while True:
