@@ -1,0 +1,9 @@
+Have you ever wanted to run your own 'numbers station' [0] but you
+just don't have anything to say? Then, babble is the program for you!
+
+babble will generate nonsensical 'sentences', convert the characters
+into Morse Code, and play the audio of the Morse Code dots and
+dashes. You can send that audio data to a transmitter, and before you
+know it, you will have your very own numbers station.
+
+[0] https://en.wikipedia.org/wiki/Numbers_station
